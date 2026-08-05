@@ -1,0 +1,23 @@
+{
+  "name": "@plugin-factory/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local MCP server bridging Claude Desktop to the Plugin Factory repo: search the catalog, scaffold a plugin, build it, and open a PR — no terminal needed by the designer.",
+  "bin": {
+    "plugin-factory-mcp-server": "./src/index.ts",
+    "plugin-factory-mcp-server-setup": "./setup.ts"
+  },
+  "nx": {
+    "tags": ["scope:tooling"]
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@plugin-factory/catalog": "*",
+    "@plugin-factory/core": "*",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

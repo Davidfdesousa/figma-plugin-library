@@ -1,0 +1,13 @@
+{
+  "id": "<kebab-case-id — must match the plugin's folder name, e.g. svg-batch-exporter>",
+  "name": "<Human-readable name, e.g. SVG Batch Exporter>",
+  "purpose": "<One sentence, one purpose — no \"and also\". If you need \"and\", it's probably two plugins.>",
+  "capabilities": ["<verb(s) from packages/catalog's CAPABILITY_VOCABULARY, e.g. export>"],
+  "keywords": ["<free-text search terms>"],
+  "owner": "<designer name or handle>",
+  "maintainer": "design-system-foundation",
+  "status": "active",
+  "visibility": "internal",
+  "allowedGroups": ["<required because visibility is \"internal\" — e.g. product-design>"],
+  "version": "0.1.0"
+}

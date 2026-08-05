@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nrwl/nx/master/packages/nx/schemas/generators.json",
+  "name": "generators",
+  "generators": {
+    "new-plugin": {
+      "factory": "./src/generators/new-plugin/generator.ts",
+      "schema": "./src/generators/new-plugin/schema.json",
+      "description": "Scaffold a new Figma plugin from templates/plugin-base, prompting for name, purpose, capabilities, and owner."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/tokens"
+    },
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/catalog"
+    },
+    {
+      "path": "./packages/styles"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./templates/plugin-base"
+    },
+    {
+      "path": "./tools/generators"
+    },
+    {
+      "path": "./tools/mcp-server"
+    }
+  ],
+  "compilerOptions": {}
+}

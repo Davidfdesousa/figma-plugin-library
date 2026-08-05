@@ -1,0 +1,21 @@
+{
+  "name": "@plugin-factory/template-plugin-base",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Functional scaffold every new plugin starts from — Design System wired in, auth guard applied, bridge configured, network access declared explicitly.",
+  "nx": {
+    "tags": ["scope:plugin"]
+  },
+  "dependencies": {
+    "@plugin-factory/core": "*",
+    "@plugin-factory/styles": "*",
+    "@plugin-factory/tokens": "*",
+    "@plugin-factory/ui": "*"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.132.0",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.19.0"
+  }
+}

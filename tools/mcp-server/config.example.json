@@ -1,0 +1,15 @@
+{
+  "repoPath": "/absolute/path/to/your/local/plugin-factory/checkout",
+  "designer": {
+    "name": "Ada Lovelace",
+    "github": {
+      "username": "ada-lovelace",
+      "token": "ghp_your_personal_access_token"
+    }
+  },
+  "repository": {
+    "owner": "your-org",
+    "name": "plugin-factory",
+    "baseBranch": "main"
+  }
+}

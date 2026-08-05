@@ -141,3 +141,19 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Nx
+.nx/cache
+.nx/workspace-data
+out-tsc
+
+# Editors
+/.idea
+*.swp
+
+# Local env
+.env.local
+
+# Plugin build artifacts (each plugin builds its own Figma-ready bundle)
+plugins/*/dist
+templates/*/dist

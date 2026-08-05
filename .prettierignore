@@ -1,0 +1,8 @@
+node_modules
+dist
+out-tsc
+coverage
+test-output
+.nx
+**/*.min.js
+package-lock.json

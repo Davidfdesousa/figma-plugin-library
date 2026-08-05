@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "@plugin-factory/tokens",
+  "targets": {
+    "build-css": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx src/generate-css.ts",
+        "cwd": "{projectRoot}"
+      },
+      "outputs": ["{projectRoot}/dist"],
+      "cache": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@plugin-factory/catalog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "plugin.meta.json schema, cross-plugin discovery, and similarity search — the anti-duplication mechanism.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "nx": {
+    "tags": ["scope:catalog"]
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

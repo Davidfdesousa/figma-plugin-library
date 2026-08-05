@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NewPlugin",
+  "title": "Scaffold a new plugin from templates/plugin-base",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable plugin name (e.g. \"SVG Batch Exporter\").",
+      "x-prompt": "What's the plugin called?",
+      "$default": { "$source": "argv", "index": 0 }
+    },
+    "purpose": {
+      "type": "string",
+      "description": "One sentence, one purpose. If it needs \"and\", it's probably two plugins.",
+      "x-prompt": "In one sentence, what does it do?"
+    },
+    "capabilities": {
+      "type": "array",
+      "description": "Capability verbs from the controlled vocabulary (packages/catalog/src/capabilities.ts).",
+      "items": {
+        "type": "string",
+        "enum": [
+          "export",
+          "import",
+          "generate",
+          "validate",
+          "sync",
+          "audit",
+          "convert",
+          "organize",
+          "annotate",
+          "measure",
+          "rename",
+          "document",
+          "publish",
+          "lint",
+          "extract",
+          "inject",
+          "analyze",
+          "transform",
+          "schedule",
+          "notify"
+        ]
+      },
+      "x-prompt": {
+        "message": "Which capabilities does it have? (space to select)",
+        "type": "list",
+        "multiselect": true,
+        "items": [
+          "export",
+          "import",
+          "generate",
+          "validate",
+          "sync",
+          "audit",
+          "convert",
+          "organize",
+          "annotate",
+          "measure",
+          "rename",
+          "document",
+          "publish",
+          "lint",
+          "extract",
+          "inject",
+          "analyze",
+          "transform",
+          "schedule",
+          "notify"
+        ]
+      }
+    },
+    "owner": {
+      "type": "string",
+      "description": "Designer responsible for this plugin (name, handle, or email).",
+      "x-prompt": "Who's the owner?"
+    },
+    "keywords": {
+      "type": "string",
+      "description": "Comma-separated search keywords. Defaults to the plugin id if left blank.",
+      "x-prompt": "A few comma-separated keywords for search (optional)?"
+    },
+    "visibility": {
+      "type": "string",
+      "description": "\"internal\" requires filling in an authorization guard; \"org\" is visible to everyone.",
+      "enum": ["internal", "org"],
+      "default": "internal",
+      "x-prompt": {
+        "message": "Visibility?",
+        "type": "list",
+        "items": [
+          { "value": "internal", "label": "internal — a specific team/group only" },
+          { "value": "org", "label": "org — everyone in the org" }
+        ]
+      }
+    }
+  },
+  "required": ["name", "purpose", "capabilities", "owner"]
+}

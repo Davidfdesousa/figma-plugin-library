@@ -1,0 +1,12 @@
+{
+  "name": "Plugin Factory Template — rename me",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["https://api.github.com"],
+    "reasoning": "Used by @plugin-factory/core's GitHubClient to read/open pull requests. Remove this entry if the plugin doesn't call GitHub. Add only the exact hosts the plugin actually calls — never \"*\" or a wildcard domain; that fails CI (see tools/validators, once built)."
+  }
+}
